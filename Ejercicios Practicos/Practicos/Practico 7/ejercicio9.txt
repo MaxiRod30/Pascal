@@ -1,0 +1,18 @@
+
+PROGRAM ejercicio9;
+
+(*Formula RaizCuadrada((x2-x1)´2+(y2-y1)¨2)*)
+VAR
+	abs1,abs2,ord1,ord2 : REAL;
+
+FUNCTION distancia(x1,x2,y1,y2 :REAL):REAL;
+BEGIN
+	distancia := sqrt(sqr(x2-x1) + sqr(y2-y1))
+END; 
+BEGIN
+write('Ingrese Punto1: '); readln(abs1,ord1);
+write('Ingrese Punto2: '); readln(abs2,ord2);
+
+writeln('Distancia: ', distancia(abs1,abs2,ord1,ord2):5:2)
+
+END.

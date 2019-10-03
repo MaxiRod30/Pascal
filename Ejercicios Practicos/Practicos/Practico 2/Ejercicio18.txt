@@ -1,0 +1,44 @@
+PROGRAM ejercicio18;
+
+
+
+VAR
+
+
+	medicion, valorVerdadero,resultado : real;
+
+
+	
+
+
+BEGIN
+
+
+
+write('Escriba medicio y valor verdadero: ');
+
+
+
+readln(medicion, valorVerdadero);
+
+
+
+resultado := abs(medicion - valorVerdadero) / valorVerdadero;
+
+
+
+writeln();
+
+writeln('Medicion= ', medicion);
+
+writeln();
+
+writeln('Valor verdadero= ', valorVerdadero:20);
+
+writeln();
+
+writeln('Resultado= ', resultado);
+
+
+
+END.

@@ -1,0 +1,44 @@
+PROGRAM ejercicio19;
+
+
+VAR
+
+numIntro, numCuadra, centenas, decenas: integer;
+
+
+
+
+BEGIN
+
+write('Escriba numero: ');
+
+
+
+readln(numIntro);
+
+
+
+numCuadra := sqr(numIntro);
+
+
+
+centenas := (numCuadra DIV 100) MOD 10;
+
+decenas := (numCuadra MOD 100) DIV 10;
+
+
+
+writeln();
+
+writeln('Numero introducido= ', numIntro);
+
+writeln();
+writeln('Cuadrado del numero= ', numCuadra);
+
+writeln();
+
+writeln('Siguiente numero seudoaleatorio= ', centenas,decenas);
+
+
+
+END.

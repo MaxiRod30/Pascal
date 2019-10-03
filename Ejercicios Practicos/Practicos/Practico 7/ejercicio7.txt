@@ -1,0 +1,60 @@
+PROGRAM ejercicio7;
+
+VAR
+	a,b,c,raiz1,raiz2 : REAL;
+	cantidad : INTEGER;
+
+PROCEDURE Raices (a1,b1,c1 :REAL; VAR raiz_1,raiz_2 : REAL; VAR cant : INTEGER);
+
+VAR
+	delta : REAL;
+	
+BEGIN	
+	cant := 0;
+	delta := sqr(b1) - (4*a1*c1);
+	
+	IF (delta = 0) THEN	
+	BEGIN		
+		raiz_1 := (-b1 + delta) / (2*a1);		
+		raiz_2 := raiz_1;
+		cant:= 1;
+	END
+	ELSE
+	BEGIN
+		IF  (delta > 0) THEN
+		BEGIN
+			raiz_1 := (-b1 + sqrt(sqr(b1) - (4*a1*c1))) / (2*a1);
+			raiz_2 := (-b1 - sqrt(sqr(b1) - (4*a1*c1))) / (2*a1);	
+			cant := 2
+		END		
+	END	
+END;
+
+BEGIN
+
+	writeln('Estructura la ecuacion de segundo grado ');
+	writeln('ax2 + bx + c= 0');
+	writeln();
+	write('Ingrese a: ');
+	readln(a);
+
+	IF a <> 0 THEN
+	BEGIN
+		write('Ingrese b: ');	
+		readln(b);
+		write('Ingrese c: ');
+		readln(c);
+		writeln();		
+		
+		Raices(a,b,c,raiz1,raiz2,cantidad);
+		
+		CASE cantidad OF
+			0: writeln('Resultado: x1 = ?, x2 = ? , cant: ',cantidad);
+			1: writeln('Resultado: x1 = ',raiz1:5:2,' , x2 = ? , cant: ',cantidad);
+			2: writeln('Resultado: x1 = ',raiz1:5:2,' , x2 = ',raiz2:5:2 ,' ,cant: ',cantidad)
+		END
+	END
+	ELSE
+		writeln('NO es de segundo grado')
+
+END.

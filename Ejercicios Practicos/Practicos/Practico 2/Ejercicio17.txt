@@ -1,0 +1,63 @@
+PROGRAM ejercicio17;
+
+
+
+VAR
+
+
+hora1, hora2,hh1,mm1,hh2,mm2,dia , salMin , salHora,HoraMas  : integer;
+
+HoraTotal,MinTotal,total : real;
+
+
+	
+
+BEGIN
+
+
+
+write('Escriba las dos horas: ');
+
+
+readln(hora1,hora2);
+
+
+
+hh1 := hora1 DIV 100;
+mm1 := hora1 MOD 100;
+
+
+hh2 := hora2 DIV 100;
+mm2 := hora2 MOD 100;
+
+
+
+HoraTotal := (hh1+hh2)*3600;
+
+MinTotal := (mm1+mm2)*60;
+
+
+
+total := HoraTotal + MinTotal;
+
+
+
+dia := trunc((total / 3600) / 24);
+
+
+
+salHora := trunc((total / 3600) - dia * 24);
+
+
+
+HoraMas := trunc((MinTotal / 60) / 60);
+
+salMin := trunc((MinTotal / 60)-(HoraMas*60));
+
+
+
+writeln(dia,' ',salHora,salMin);
+
+
+
+END.

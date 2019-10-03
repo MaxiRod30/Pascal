@@ -1,0 +1,54 @@
+PROGRAM ejercicio12;
+
+CONST
+	
+	onza1 = 0.22;
+	
+	onzaAdicional = 0.17;
+
+
+VAR
+	
+	peso : REAL;
+	
+
+
+BEGIN 
+
+
+
+write('Ingrese el peso de la carta: ');
+
+readln(peso);
+
+
+
+IF peso <= 1.00 THEN
+	
+	writeln('Cuesta : $',onza1:8:3)
+
+ELSE
+
+
+BEGIN
+	
+	IF  ((peso / trunc(peso)) = 1.00) AND (peso >=2) THEN
+		
+		writeln('Cuesta : $',(onza1 + (trunc(peso)-1)*onzaAdicional):8:3);
+
+	
+	
+	IF not(((peso / trunc(peso)) = 1.00) AND (peso >=2)) THEN
+		
+		writeln('Cuesta : $',(onza1 + (trunc(peso)*onzaAdicional)):8:3);
+
+		
+	
+	IF (peso < 1) AND (peso < 2) THEN
+		
+		writeln('Cuesta : $',(onza1 + onzaAdicional):8:3)
+
+
+END
+
+END.

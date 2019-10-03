@@ -1,0 +1,53 @@
+PROGRAM ejercicio21;
+
+
+VAR
+
+
+x, exponente,resulraizcal, resultadosqrt : real;
+
+
+
+	
+
+BEGIN
+
+
+
+exponente := 0.5;
+
+
+
+write('Escriba numero: ');
+
+
+
+readln(x);
+
+
+
+
+resulraizcal := 1 * exp(exponente*ln(x));
+
+
+
+resultadosqrt := sqrt(x);
+
+
+
+
+writeln();
+
+writeln('Numero introducido= ', x);
+
+writeln();
+
+writeln('Raiz cuadrada calculada= ',  resulraizcal);
+
+writeln();
+
+writeln('Valor de Sqrt(x)= ', resultadosqrt);
+
+
+
+END.

@@ -1,0 +1,28 @@
+
+PROGRAM ejercicio4;
+
+VAR 
+	a,b,c :INTEGER;
+
+PROCEDURE Girar(VAR Ga,Gb,Gc : INTEGER);{*Es necesario cargarle los valores antes de entrar a a la funcion*}
+
+VAR aux : INTEGER;
+
+BEGIN
+	aux:= Ga;
+	Ga := Gc;
+	Gc := Gb;
+	Gb := aux;
+END;
+
+BEGIN
+
+write('Ingrese 3 valores enteros: ');
+readln(a,b,c);
+Girar(a,b,c);
+
+writeln('El valor de a: ',a);
+writeln('El valor de b: ',b);
+writeln('El valor de c: ',c)
+
+END.

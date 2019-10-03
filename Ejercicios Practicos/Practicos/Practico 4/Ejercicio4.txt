@@ -1,0 +1,29 @@
+
+PROGRAM Ejercicio4;
+
+
+VAR 
+	
+	a,b,n,i : INTEGER;
+
+
+BEGIN
+ 
+writeln('Escriba  a = inicio , b = hasta , n = multiplo ');
+ 
+ 
+
+readln(a,b,n);
+ 
+ 
+
+FOR i:= a TO b DO
+ 
+	
+	IF (i MOD n) = 0 THEN
+	
+		
+		write(i, ' ');
+ 
+
+END.

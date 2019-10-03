@@ -1,0 +1,58 @@
+PROGRAM ejercicio3P9;
+
+CONST 
+	N = 10;
+	
+TYPE
+	rango = 1 .. N;
+	Arreglo = ARRAY[rango] OF INTEGER;
+(*--------------------------VARIABLES------------------------*)
+VAR
+	datos : Arreglo;
+	posicion,valorMax : INTEGER; 
+(*----------------PROCEDIMIENTO CARGA------------------------*)
+PROCEDURE Carga (var arr:Arreglo);
+
+VAR i :INTEGER;
+
+BEGIN
+	FOR i:=1 TO N DO
+		read(arr[i])
+END;
+(*--------------------------MOSTRAR-----------------------*)
+PROCEDURE Mostrar (arr:Arreglo);
+
+VAR i :INTEGER;
+
+BEGIN
+	FOR i:=1 TO N DO
+		write(arr[i], '  ')
+END;
+(*-----------------PROCEDIMIENTO MAXPOS-----------------------*)
+PROCEDURE MaxPos (arr:Arreglo; var pos,valMax : INTEGER);
+VAR i:INTEGER;
+BEGIN
+	pos := 1;
+	valMax:= arr[1];
+	
+	FOR i:=1 TO N DO
+		IF arr[i] > valMax THEN
+			BEGIN
+				valMax := arr[i];
+				pos := i
+			END
+END;
+(*-------------------PROGRAMA---------------------------*)
+BEGIN
+(*Se cargar los datos en el array*)
+write('Ingrese los 10 datos para el array: ');
+Carga(datos);
+
+MaxPos(datos,posicion,valorMax);
+
+write('La posicion es ',posicion,' y el valor maximo es: ',valorMax)
+
+(*Mostrar(datos);*)
+
+
+END.

@@ -1,0 +1,85 @@
+
+PROGRAM ejercicio14;
+
+
+
+VAR
+
+
+	a,b,c,raiz1,raiz2,delta,complex1,complex2 : REAL;
+
+
+
+BEGIN
+
+
+
+writeln('Estructura la ecuacion de segundo grado ');
+
+
+writeln('ax2 + bx + c= 0');
+
+
+
+writeln();
+
+
+write('Ingrese a: ');
+
+readln(a);
+
+write('Ingrese b: ');
+
+readln(b);
+
+write('Ingrese c: ');
+
+readln(c);
+
+writeln();
+
+
+
+delta := sqr(b) - (4*a*c);
+
+
+
+IF (delta = 0) THEN
+	
+BEGIN
+		
+	raiz1 := (-b + delta) / (2*a);
+		
+	writeln('Dos raices reales iguales: ', raiz1:5:2)
+	
+END;
+	
+
+IF  (delta > 0) THEN
+	
+BEGIN
+		
+	raiz1 := (-b + sqrt(sqr(b) - (4*a*c))) / (2*a);
+		
+	raiz2 := (-b - sqrt(sqr(b) - (4*a*c))) / (2*a);
+		
+	writeln('Dos raices reales diferentes: ', raiz1:5:2 , ' y ',raiz2:5:2)
+	
+END;
+	
+
+IF (delta < 0) THEN
+
+BEGIN
+	
+	complex1 := -b / (2*a);
+	
+	complex2 := delta / (2*a);
+	
+	writeln('Dos raices complejas diferentes: ', complex1:5:2 , ' (+/-) i ',complex2:5:2)
+END;
+
+
+
+
+END.

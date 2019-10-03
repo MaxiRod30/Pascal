@@ -1,0 +1,20 @@
+PROGRAM  ejercicio5;
+
+VAR
+       i,n,resul : INTEGER;
+
+
+BEGIN
+
+write('Ingrese un valor natura el n= ');
+readln(n);
+
+resul := n DIV 2;
+
+FOR i := 1 TO resul DO
+        IF( ( n MOD i ) = 0) THEN
+                write(i, ' ');
+write(n);
+read(n);
+
+END.

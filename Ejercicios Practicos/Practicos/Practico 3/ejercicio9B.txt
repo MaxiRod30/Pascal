@@ -1,0 +1,33 @@
+PROGRAM ejercicio9B;
+
+
+
+VAR
+	
+	calif : CHAR;
+
+BEGIN 
+
+
+
+
+
+read(calif);
+
+
+
+CASE calif OF
+	
+	'D','F': writeln('Trabajo deficiente');
+	
+	'C','B': writeln('Buen trabajo');
+	
+	'A' : writeln('Excelente trabajo')
+	
+
+END;
+
+
+
+
+END.

@@ -1,0 +1,26 @@
+PROGRAM ejercicio6P7;
+CONST
+	FIN = '$';
+	SEP = '|';
+
+VAR
+		carac : CHAR;
+BEGIN
+read(carac);
+WHILE carac <> FIN DO
+BEGIN 
+	REPEAT
+		IF carac = SEP THEN
+			writeln
+		ELSE
+			write(carac);
+		read(carac)
+	UNTIL carac = FIN;
+	
+	writeln;
+	writeln;
+	writeln;
+	readln;
+	read(carac)
+END
+END.

@@ -1,0 +1,74 @@
+PROGRAM ejercicio11;
+
+
+
+VAR
+	resulX,resulY,a,b,c,d,e,f : REAL;
+
+
+
+BEGIN 
+
+
+
+
+writeln('Estructura del sistema de ecuaciones ');
+
+
+writeln('ax + by = c');
+writeln('dx + ey = f'); 
+
+
+writeln();
+
+
+write('Ingrese a: ');
+
+readln(a);
+
+write('Ingrese b: ');
+
+readln(b);
+
+write('Ingrese c: ');
+
+readln(c);
+
+write('Ingrese d: ');
+
+readln(d);
+
+write('Ingrese e: ');
+
+readln(e);
+
+write('Ingrese f: ');
+
+readln(f);
+
+writeln();
+
+
+
+IF (a*e - d*b) <> 0 THEN
+	
+BEGIN
+		
+	resulX := (c*e - f*b) / (a*e - d*b);
+		
+	resuly := (a*f - d*c) / (a*e - d*b);
+		
+	writeln('El resultado de X es: ',resulX:10:5);
+		
+	writeln('El resultado de Y es: ',resulY:10:5);
+	
+END
+
+ELSE
+	
+	writeln('Sistema sin solucion')
+
+
+
+
+END.

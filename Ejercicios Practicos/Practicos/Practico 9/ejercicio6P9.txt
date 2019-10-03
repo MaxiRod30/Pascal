@@ -1,0 +1,76 @@
+PROGRAM ejercicio6P9;
+
+CONST 
+	M = 3;
+	N = 2;(*para cargar menos datos*)
+	P = 4;
+TYPE
+	rangoM = 1 .. M;
+	rangoN = 1 .. N;
+	rangoP = 1 .. P;
+	
+	Arreglo = ARRAY[rangoM,rangoN,rangoP] OF BOOLEAN;
+(*--------------------------VARIABLES------------------------*)
+VAR
+	datos : Arreglo;
+ 
+(*----------------PROCEDIMIENTO CARGA------------------------*)
+PROCEDURE Carga (var arr:Arreglo);
+
+VAR i,j,t :INTEGER;
+	caract :CHAR;
+
+BEGIN
+	write('Ingrese datos de la matriz:  ');
+
+	FOR i:=1 TO M DO
+		FOR j:=1 TO N DO
+				FOR t:=1 TO P DO
+				BEGIN
+					read(caract);
+					arr[i,j,t]:= caract='T'
+				END
+END;
+(*--------------------------MOSTRAR-----------------------*)
+PROCEDURE Mostrar (arr:Arreglo);
+
+VAR i,j,t :INTEGER;
+
+BEGIN
+	FOR i:=1 TO M DO
+		FOR j:=1 TO N DO
+				FOR t:=1 TO P DO
+					write(arr[i,j,t], '  ')		
+END;
+(*-----------------PROCEDIMIENTO MAXPOS-----------------------*)
+PROCEDURE Intercambiar (var arr:Arreglo);
+VAR j,i,t:INTEGER;
+BEGIN
+	FOR i:=1 TO M DO
+		FOR j:=1 TO N DO
+				FOR t:=1 TO P DO
+				BEGIN
+					arr[i,j,t]:= NOT arr[i,j,t]
+				END
+
+END;
+(*-------------------PROGRAMA---------------------------*)
+BEGIN
+(*Se cargar los datos en el array*)
+
+Carga(datos);
+
+writeln;
+writeln;
+
+Mostrar(datos);
+
+writeln;
+writeln;
+
+Intercambiar(datos);
+
+Mostrar(datos);
+
+
+END.

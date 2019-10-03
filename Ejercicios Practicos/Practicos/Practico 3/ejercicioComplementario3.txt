@@ -1,0 +1,58 @@
+
+PROGRAM	ejercicioComplementario3;
+
+
+
+VAR	
+	
+	int1,int2,int3 : INTEGER;
+	
+	bandera : BOOLEAN;
+	
+
+BEGIN
+	
+
+bandera := false;
+	
+	
+write('Escriba 3 numeros enteros: ');
+	
+	
+readln(int1,int2,int3);
+	
+
+	
+IF (int1 >= int2) AND (int1 >= int3) AND (NOT(bandera)) THEN
+		
+BEGIN
+			
+	bandera := true;
+			
+	writeln('Mayor numero es: ',int1)
+		
+END;
+		
+	
+IF (int2 >= int1) AND (int2 >= int3) AND (NOT(bandera))THEN
+		
+BEGIN
+			
+	bandera := true;
+			
+	writeln('Mayor numero es: ',int2)
+		
+END;
+		
+	
+IF (int3 >= int1) AND (int3 >= int2) AND (NOT(bandera)) THEN
+		
+BEGIN	
+			
+	bandera := true;
+			
+	writeln('Mayor numero es: ',int3)
+		
+END
+
+END.

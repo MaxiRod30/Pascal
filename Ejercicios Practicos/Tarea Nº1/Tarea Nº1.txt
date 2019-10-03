@@ -1,0 +1,52 @@
+program PrincipalTarea1;
+
+type
+   EnteroPositivo = 1 .. MaxInt;
+var
+   num1,num2 : EnteroPositivo;
+
+(*{ funciones aritméticas }*)
+function doble(x : integer) : integer;
+begin
+   doble:= x + x
+end;
+
+function mitad(x : integer) : integer;
+begin
+   mitad:= x div 2
+end;
+
+function esImpar(n : integer) : boolean;
+begin
+   esImpar:= odd(n)
+end;
+
+FUNCTION MultiplicacionRusa(a,b: integer): integer;
+
+VAR resultado, calMitad,calDoble : INTEGER; 
+
+BEGIN
+calMitad:= a;
+calDoble:= b;
+resultado:= 0;
+
+WHILE calMitad <> 0 DO
+BEGIN
+	IF esImpar(calMitad)THEN
+		resultado:= resultado + calDoble;
+		
+	calDoble:= doble(calDoble);
+	calMitad:= mitad(calMitad)
+END;
+MultiplicacionRusa:= resultado
+END;
+
+
+
+begin
+   write('Ingrese números: ');
+   
+   readln(num1,num2);
+
+   writeln('Resultado: ',MultiplicacionRusa(num1,num2))
+end.

@@ -1,0 +1,120 @@
+PROGRAM ejercicio13;
+
+
+VAR
+	
+
+n,d,uni,cen,dec,mil :INTEGER;
+
+	i : BOOLEAN;
+
+
+
+BEGIN
+
+
+
+i:= FALSE;
+
+
+write('Ingrese un numero de 4 digitos: ');
+
+readln(n);
+
+writeln();
+
+write('Ingrese un numero de 1 digito: ');
+
+readln(d);
+
+
+
+uni := n MOD 10;
+
+mil := n DIV 1000;
+
+cen := (n DIV 100) MOD 10;
+
+dec := (n DIV 10) MOD 10;
+
+
+writeln(n);
+
+
+
+IF (d = mil) THEN
+	
+BEGIN
+		
+	write('+');
+		
+	i := TRUE
+	
+END
+
+ELSE
+	
+	write(' ');
+	
+
+
+IF d = cen	THEN
+	
+BEGIN
+		
+	write('+');
+		
+	i := TRUE
+	
+END
+
+ElSE
+	
+	write(' ');
+	
+
+
+IF d = dec THEN
+	
+BEGIN
+		
+	write('+');
+		
+	i:= TRUE
+	
+END
+
+ELSE
+	
+	write(' ');
+	
+
+
+IF d = uni THEN
+	
+BEGIN
+		
+	write('+');
+		
+	i:= TRUE
+	
+END
+
+ELSE
+	
+	write(' ');
+
+
+
+IF not(i) THEN
+	
+BEGIN
+		
+	writeln();
+		
+	write(d,' no aparece en ',n);
+	
+END
+
+
+END.

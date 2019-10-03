@@ -1,0 +1,45 @@
+PROGRAM ejercicio22;
+
+
+VAR
+	
+car1,car2,car3 : char;
+	
+cen,dec,uni,resultado :integer;	
+
+	
+
+BEGIN
+
+
+
+write('Escriba el numero octal: ');
+
+
+readln(car1,car2,car3);
+
+
+
+cen := (ord(car1)-ord('0')) * sqr(8);
+
+dec := (ord(car2)-ord('0')) * 8;
+
+uni := (ord(car3)-ord('0')) * 1;
+
+
+
+resultado := cen + dec + uni;
+
+
+
+writeln();
+
+writeln('Octal ingresado:  ', car1,car2,car3);
+
+writeln();
+
+writeln('Decimal:  ', resultado);
+
+
+
+END.

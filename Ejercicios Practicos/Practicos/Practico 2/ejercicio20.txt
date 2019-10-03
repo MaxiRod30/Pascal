@@ -1,0 +1,48 @@
+PROGRAM ejercicio20;
+
+
+
+VAR
+
+
+
+x, resul5Termi, resultadoExp : real;
+
+
+
+
+
+BEGIN
+
+
+
+write('Escriba numero: ');
+
+
+
+readln(x);
+
+
+
+resul5Termi := 1 + (x/1) + (sqr(x)/2*1) + ((sqr(x) * x)/ (3*2*1)) + ((sqr(x) * sqr(x))/ (4*3*2*1)) + ((sqr(x) * sqr(x)* x)/ (5*4*3*2*1));
+
+
+
+resultadoExp := exp(x);
+
+writeln();
+
+writeln('Numero introducido= ', x);
+
+writeln();
+
+writeln('Suma de los cinco terminos= ',  resul5Termi);
+
+writeln();
+
+writeln('Valor de Exp(x)= ', resultadoExp);
+
+
+
+END.
+

@@ -1,0 +1,43 @@
+PROGRAM ejercicio10;
+
+
+
+VAR
+	num,resul : INTEGER;
+	
+
+
+BEGIN 
+
+
+resul:= 0;
+
+
+write('Ingrese el numero entero: ');
+
+
+
+read(num);
+
+
+
+resul := num DIV 1000;
+
+
+
+IF (resul) <> 0 THEN
+	
+BEGIN
+		
+	writeln('El numero es: ',resul,'.', num MOD 1000)
+	
+END
+
+ELSE
+	
+	writeln('El numero es: ',num)
+
+
+
+
+END.

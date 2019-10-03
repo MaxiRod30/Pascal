@@ -1,0 +1,28 @@
+PROGRAM ejercicio11;
+
+VAR 
+	i,m,n,result,valorMax : INTEGER;
+	
+BEGIN
+write('Ingrese un valor para m: ');
+readln(m);
+write('Ingrese un valor para n: ');
+readln(n);
+
+valorMax := sqr(m) - 18*m + 5;
+
+IF m <= n THEN
+BEGIN
+	FOR i:= m+1 TO n DO
+	BEGIN
+		result := sqr(i) - 18*i + 5;
+		IF result > valorMax THEN
+			valorMax := result
+	END	
+END
+ELSE
+	write('Los valores de m y n no son correctos');
+	
+write('El valor maximo para x en el entorno de ',m,' a ',n,' es ',valorMax)
+
+END.

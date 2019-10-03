@@ -1,0 +1,39 @@
+PROGRAM ejercicio9;
+
+
+VAR
+	
+	k,r,s,t : INTEGER;
+
+BEGIN 
+
+
+
+r:=0;
+
+s:=0;
+
+t:=0;
+
+
+read(k);
+
+
+
+CASE k OF
+	
+	0: r:= r+1;
+	
+	1: s:= s+1;
+	
+	2,3,4 : t:=t+1
+
+END;
+
+
+
+write('imprimo')
+
+
+
+END.

@@ -1,0 +1,75 @@
+PROGRAM ejercicio5P9;
+
+CONST 
+	N = 4;(*para cargar menos datos*)
+	
+TYPE
+	rango = 1 .. N;
+	Arreglo = ARRAY[rango,rango] OF INTEGER;
+(*--------------------------VARIABLES------------------------*)
+VAR
+	datos : Arreglo;
+	FilaM,FilaN: INTEGER; 
+(*----------------PROCEDIMIENTO CARGA------------------------*)
+PROCEDURE Carga (var arr:Arreglo);
+
+VAR i,j :INTEGER;
+
+BEGIN
+	write('Ingrese datos de la matriz:  ');
+	FOR i:=1 TO N DO
+		FOR j:=1 TO N DO
+			read(arr[i,j])
+END;
+(*--------------------------MOSTRAR-----------------------*)
+PROCEDURE Mostrar (arr:Arreglo);
+
+VAR i,j :INTEGER;
+
+BEGIN
+	FOR i:=1 TO N DO
+	BEGIN
+		FOR j:=1 TO N DO
+			write(arr[i,j], '  ');
+		writeln;
+	END
+		
+END;
+(*-----------------PROCEDIMIENTO MAXPOS-----------------------*)
+PROCEDURE CambiarFilas (var arr:Arreglo; filam,filan : INTEGER);
+VAR j,temp:INTEGER;(*i Filas / j Columnas*)
+BEGIN
+
+		FOR j:= 1 TO N DO
+		BEGIN
+			temp := arr[filan,j];
+			arr[filan,j] := arr[filam,j];
+			arr[filam,j] := temp
+		END
+END;
+(*-------------------PROGRAMA---------------------------*)
+BEGIN
+(*Se cargar los datos en el array*)
+
+Carga(datos);
+
+writeln;
+writeln;
+
+Mostrar(datos);
+
+writeln;
+writeln;
+
+write('Ingrese filaM y filaN: ');
+read(FilaM); read(FilaN);
+
+IF (FilaM <= N) AND (FilaN <= N) THEN
+	CambiarFilas(datos,FilaM,FilaN)
+ELSE
+	write('ERROR AL INGRESAR FILAS');
+
+Mostrar(datos);
+
+
+END.
